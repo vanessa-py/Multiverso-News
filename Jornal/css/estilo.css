@@ -1,0 +1,134 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(30, 31, 34);
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+header:hover {
+    background-color: rgb(94, 102, 211);
+    position: fixed; 
+    transition: background 0.5s ease;
+}
+
+.parte-um, .parte-dois {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.logo, .perfil {
+    width: 35px;
+    height: 35px;
+}
+
+.perfil { border-radius: 50%; }
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.menu-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px;
+    background: linear-gradient(to top, rgb(30, 31, 34) 0%, transparent 50%), 
+                url('../Imagens/imghero.png') no-repeat center/cover;
+}
+
+.conteudo {
+    color: white;
+    margin-bottom: 100px;
+}
+
+
+.fileira-de-filmes, 
+.outra-fileira-de-filmes {
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    z-index: 20px;
+    
+}
+
+.fileira-de-filmes { margin-top: -50px; } 
+
+.fileira-de-filmes h2, 
+.outra-fileira-de-filmes h2 {
+    position: absolute;   
+    margin-left: 10px;
+    top: -25px;
+    margin-bottom: 20px; 
+    color: white;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 20px;    
+}
+
+
+.cards-container, 
+.outro-card-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+    
+    
+}
+
+.cards-container img, 
+.outro-card-container img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s, border 0.3s;
+}
+
+.cards-container img:hover, 
+.outro-card-container img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+.link-logo {
+    text-decoration: none; 
+    color: inherit;       
+    display: inline-block; 
+}

@@ -1,0 +1,164 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(30, 31, 34);
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: background 0.4s ease;
+}
+
+header:hover {
+    background: rgb(94, 102, 211);
+}
+
+.parte-um, .parte-dois {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.nome-site {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo, .perfil {
+    width: 35px;
+    height: 35px;
+}
+
+.perfil { border-radius: 50%; }
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.menu-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.nome-perfil {
+    color: white;
+    font-weight: 600;
+}
+
+.lupa {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+.noticias {
+    padding: 100px 30px 60px; 
+}
+
+.noticias-titulo {
+    color: white;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 28px;
+    margin-bottom: 28px;
+    margin-left: 4px;
+}
+
+
+.noticias-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+
+.noticia-destaque {
+    grid-column: span 1;
+}
+
+
+.noticia {
+    background-color: rgb(40, 42, 46);
+    border-radius: 10px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.noticia:hover {
+    transform: scale(1.02);
+    background-color: rgb(50, 52, 58);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.noticia-tag {
+    display: inline-block;
+    background-color: rgb(94, 102, 211);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.noticia h3 {
+    color: white;
+    font-size: 18px;
+    font-family: 'Gill Sans', sans-serif;
+    line-height: 1.4;
+}
+
+.noticia p {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 14px;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.noticia-link {
+    color: rgb(94, 102, 211);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 4px;
+    transition: color 0.2s;
+}
+
+.noticia-link:hover {
+    color: white;
+}
